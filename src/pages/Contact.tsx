@@ -48,15 +48,15 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      title: "Phone Number",
-      content: "+254 XXX XXX XXX",
-      link: "tel:+254XXXXXXXXX",
+      title: "Phone Numbers",
+      content: ["+254 728 268 660", "+254 752 268 660", "+254 780 566 660"],
+      link: "tel:+254728268660",
     },
     {
       icon: Mail,
       title: "Email Address",
-      content: "info@blueflamecargo.com",
-      link: "mailto:info@blueflamecargo.com",
+      content: "info@bfcmil.co.ke",
+      link: "mailto:info@bfcmil.co.ke",
     },
     {
       icon: Clock,
@@ -89,7 +89,15 @@ const Contact = () => {
                     <Icon className="h-7 w-7 text-accent" />
                   </div>
                   <h3 className="font-semibold mb-2">{info.title}</h3>
-                  {info.link ? (
+                  {Array.isArray(info.content) ? (
+                    <div className="space-y-1">
+                      {info.content.map((item, i) => (
+                        <a key={i} href={`tel:${item.replace(/\s/g, '')}`} className="block text-sm text-muted-foreground hover:text-accent">
+                          {item}
+                        </a>
+                      ))}
+                    </div>
+                  ) : info.link ? (
                     <a href={info.link} className="text-sm text-muted-foreground hover:text-accent">
                       {info.content}
                     </a>

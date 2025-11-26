@@ -105,8 +105,8 @@ const Home = () => {
         </Carousel>
 
         {/* Content Overlay */}
-        <div className="container relative z-10 mx-auto px-4 h-full flex items-center">
-          <div className="max-w-3xl text-primary-foreground">
+        <div className="container relative z-10 mx-auto px-4 min-h-screen flex items-center">
+          <div className="max-w-3xl text-primary-foreground pt-20">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Global Reach. Local Expertise. Seamless Logistics.
             </h1>
