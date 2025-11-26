@@ -78,7 +78,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section with Carousel */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden">
         {/* Background Image Carousel */}
         <Carousel
           plugins={[fadePlugin.current, autoplayPlugin.current]}
@@ -94,7 +94,7 @@ const Home = () => {
             {heroImages.map((image, index) => (
               <CarouselItem key={index} className="pl-0">
                 <div 
-                  className="h-[600px] w-full bg-cover bg-center transition-opacity duration-1000"
+                  className="min-h-screen w-full bg-cover bg-center transition-opacity duration-1000"
                   style={{ backgroundImage: `url(${image})` }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
