@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import { Package, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -43,17 +44,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="bg-accent p-2 rounded-lg group-hover:scale-110 transition-transform">
-                <Package className="h-6 w-6 text-accent-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className={`font-bold text-lg leading-none transition-colors ${
-                  isScrolled ? "text-primary" : "text-white"
-                }`}>BlueFlame</span>
-                <span className={`text-xs transition-colors ${
-                  isScrolled ? "text-muted-foreground" : "text-white/70"
-                }`}>Cargo Masters</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="BlueFlame Cargo Masters Logo" 
+                className="h-10 w-auto group-hover:scale-105 transition-transform"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -137,10 +132,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Package className="h-6 w-6" />
-                <span className="font-bold text-lg">BlueFlame</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="BlueFlame Cargo Masters Logo" 
+                className="h-12 w-auto"
+              />
               <p className="text-sm text-primary-foreground/80">
                 Global Reach. Local Expertise. Seamless Logistics.
               </p>
