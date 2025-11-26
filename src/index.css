@@ -88,3 +88,32 @@ All colors MUST be HSL.
     @apply font-heading font-bold;
   }
 }
+
+/* Wavy text animations */
+@keyframes wavyChar {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotateX(-90deg);
+  }
+  40% {
+    transform: translateY(-10px) rotateX(20deg);
+  }
+  70% {
+    transform: translateY(5px) rotateX(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+@keyframes wavyCharOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) rotateX(90deg);
+  }
+}
