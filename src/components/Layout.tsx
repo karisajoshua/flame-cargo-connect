@@ -180,8 +180,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <h3 className="font-semibold mb-3">Contact</h3>
               <ul className="space-y-2 text-sm text-primary-foreground/80">
                 <li>📍 Nairobi, Kenya</li>
-                <li>📞 +254 XXX XXX XXX</li>
-                <li>📧 info@blueflamecargo.com</li>
+                <li>📞 +254 728 268 660</li>
+                <li>📧 info@bfcmil.co.ke</li>
                 <li>🕘 Mon–Fri: 8:00 AM – 6:00 PM</li>
               </ul>
             </div>
