@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Globe, Target, Eye, Users } from "lucide-react";
+import WorldMap from "@/components/WorldMap";
 
 const About = () => {
   return (
@@ -76,6 +77,11 @@ const About = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               With a network spanning across continents, we deliver your cargo anywhere in the world
             </p>
+          </div>
+          
+          {/* World Map */}
+          <div className="mb-12">
+            <WorldMap />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
