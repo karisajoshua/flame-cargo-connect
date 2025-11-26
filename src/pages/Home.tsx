@@ -6,11 +6,19 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
+import WavyText from "@/components/WavyText";
 import heroCargo1 from "@/assets/hero-cargo.jpg";
 import heroCargo2 from "@/assets/hero-cargo-2.jpg";
 import heroCargo3 from "@/assets/hero-cargo-3.jpg";
 import heroCargo4 from "@/assets/hero-cargo-4.jpg";
 import heroCargo5 from "@/assets/hero-cargo-5.jpg";
+
+const heroTaglines = [
+  "Global Reach. Local Expertise. Seamless Logistics.",
+  "Your Cargo. Our Priority. Delivered On Time.",
+  "Connecting Africa to the World.",
+  "Fast. Reliable. Secure Shipping.",
+];
 
 const Home = () => {
   const autoplayPlugin = useRef(
@@ -107,8 +115,8 @@ const Home = () => {
         {/* Content Overlay */}
         <div className="container relative z-10 mx-auto px-4 min-h-screen flex items-center">
           <div className="max-w-3xl text-primary-foreground pt-20">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Global Reach. Local Expertise. Seamless Logistics.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight min-h-[3.5em] md:min-h-[2.5em]">
+              <WavyText phrases={heroTaglines} interval={5000} />
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
               Trusted by businesses across Kenya and worldwide for fast, reliable, and secure logistics solutions.
