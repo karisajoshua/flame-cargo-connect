@@ -2,8 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Plane, Ship, Truck, Package, Warehouse, HardHat, FileCheck, Globe } from "lucide-react";
-import freightImage from "@/assets/services-freight.jpg";
-import customsImage from "@/assets/services-customs.jpg";
+import airFreightImage from "@/assets/service-air-freight.jpg";
+import seaFreightImage from "@/assets/service-sea-freight.jpg";
+import customsImage from "@/assets/service-customs.jpg";
+import importExportImage from "@/assets/service-import-export.jpg";
+import warehouseImage from "@/assets/service-warehouse.jpg";
+import projectCargoImage from "@/assets/service-project-cargo.jpg";
 
 const Services = () => {
   const services = [
@@ -13,7 +17,7 @@ const Services = () => {
       description:
         "End-to-end freight solutions by air for time-sensitive cargo. We manage every leg of your cargo's journey with speed and precision, ensuring on-time delivery across all major global airports.",
       features: ["Express shipping", "Door-to-door delivery", "Cargo insurance", "Real-time tracking"],
-      image: freightImage,
+      image: airFreightImage,
     },
     {
       icon: Ship,
@@ -21,7 +25,7 @@ const Services = () => {
       description:
         "Cost-effective ocean freight solutions for bulk shipments. Whether FCL or LCL, we handle your sea cargo with expertise, managing everything from booking to port clearance.",
       features: ["FCL & LCL options", "Port-to-port service", "Competitive rates", "Global coverage"],
-      image: freightImage,
+      image: seaFreightImage,
     },
     {
       icon: FileCheck,
@@ -37,7 +41,7 @@ const Services = () => {
       description:
         "Reliable solutions for importers and exporters—fully compliant with Kenyan and international laws. We simplify cross-border trade with expert guidance and seamless processes.",
       features: ["Trade compliance", "Documentation handling", "Regulatory guidance", "Multi-modal transport"],
-      image: freightImage,
+      image: importExportImage,
     },
     {
       icon: Warehouse,
@@ -45,7 +49,7 @@ const Services = () => {
       description:
         "Secure storage and last-mile delivery services tailored to your business needs. Our modern facilities provide safe storage with flexible distribution options.",
       features: ["Climate-controlled storage", "Inventory management", "Last-mile delivery", "Order fulfillment"],
-      image: customsImage,
+      image: warehouseImage,
     },
     {
       icon: HardHat,
@@ -53,7 +57,7 @@ const Services = () => {
       description:
         "Heavy, oversized, or time-sensitive cargo? We've got the expertise and equipment to handle complex project cargo that requires specialized handling and transport solutions.",
       features: ["Heavy lift cargo", "Route surveys", "Special equipment", "Technical expertise"],
-      image: freightImage,
+      image: projectCargoImage,
     },
   ];
 
