@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo.png";
-
+import ServicesMegaMenu from "./ServicesMegaMenu";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,8 +20,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/services", label: "Services" },
-    { to: "/courier", label: "Courier" },
     { to: "/about", label: "About Us" },
     { to: "/track", label: "Track" },
     { to: "/quote", label: "Quote" },
@@ -54,14 +52,27 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => (
+              <Link
+                to="/"
+                className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                  isActive("/")
+                    ? "text-accent bg-accent/10"
+                    : isScrolled
+                      ? "text-foreground hover:text-accent hover:bg-accent/5"
+                      : "text-white hover:text-accent hover:bg-white/10"
+                }`}
+              >
+                Home
+              </Link>
+              <ServicesMegaMenu isScrolled={isScrolled} />
+              {navLinks.filter(link => link.to !== "/").map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
                   className={`px-4 py-2 rounded-md font-medium transition-colors ${
                     isActive(link.to)
                       ? "text-accent bg-accent/10"
-                      : isScrolled 
+                      : isScrolled
                         ? "text-foreground hover:text-accent hover:bg-accent/5"
                         : "text-white hover:text-accent hover:bg-white/10"
                   }`}

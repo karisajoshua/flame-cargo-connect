@@ -14,6 +14,7 @@ const Services = () => {
     {
       icon: Plane,
       title: "Air Freight Forwarding",
+      slug: "air-freight",
       description:
         "End-to-end freight solutions by air for time-sensitive cargo. We manage every leg of your cargo's journey with speed and precision, ensuring on-time delivery across all major global airports.",
       features: ["Express shipping", "Door-to-door delivery", "Cargo insurance", "Real-time tracking"],
@@ -22,6 +23,7 @@ const Services = () => {
     {
       icon: Ship,
       title: "Sea Freight Forwarding",
+      slug: "sea-freight",
       description:
         "Cost-effective ocean freight solutions for bulk shipments. Whether FCL or LCL, we handle your sea cargo with expertise, managing everything from booking to port clearance.",
       features: ["FCL & LCL options", "Port-to-port service", "Competitive rates", "Global coverage"],
@@ -30,6 +32,7 @@ const Services = () => {
     {
       icon: FileCheck,
       title: "Customs Clearance",
+      slug: "customs-clearance",
       description:
         "We ensure smooth and fast customs processing, minimizing delays and penalties. Our experienced team handles all documentation, compliance checks, and regulatory requirements.",
       features: ["Import/Export clearance", "Documentation support", "Duty optimization", "Compliance assurance"],
@@ -38,6 +41,7 @@ const Services = () => {
     {
       icon: Globe,
       title: "Import & Export Logistics",
+      slug: "import-export",
       description:
         "Reliable solutions for importers and exporters—fully compliant with Kenyan and international laws. We simplify cross-border trade with expert guidance and seamless processes.",
       features: ["Trade compliance", "Documentation handling", "Regulatory guidance", "Multi-modal transport"],
@@ -46,6 +50,7 @@ const Services = () => {
     {
       icon: Warehouse,
       title: "Warehousing & Distribution",
+      slug: "warehousing",
       description:
         "Secure storage and last-mile delivery services tailored to your business needs. Our modern facilities provide safe storage with flexible distribution options.",
       features: ["Climate-controlled storage", "Inventory management", "Last-mile delivery", "Order fulfillment"],
@@ -54,6 +59,7 @@ const Services = () => {
     {
       icon: HardHat,
       title: "Project Cargo Handling",
+      slug: "project-cargo",
       description:
         "Heavy, oversized, or time-sensitive cargo? We've got the expertise and equipment to handle complex project cargo that requires specialized handling and transport solutions.",
       features: ["Heavy lift cargo", "Route surveys", "Special equipment", "Technical expertise"],
@@ -102,9 +108,14 @@ const Services = () => {
                           </div>
                         ))}
                       </div>
-                      <Button variant="cta" asChild>
-                        <Link to="/quote">Request Quote</Link>
-                      </Button>
+                      <div className="flex gap-3">
+                        <Button variant="cta" asChild>
+                          <Link to={`/services/${service.slug}`}>Learn More</Link>
+                        </Button>
+                        <Button variant="outline" asChild>
+                          <Link to="/quote">Get Quote</Link>
+                        </Button>
+                      </div>
                     </Card>
                   </div>
                   <div className={isEven ? "" : "lg:col-start-1 lg:row-start-1"}>
