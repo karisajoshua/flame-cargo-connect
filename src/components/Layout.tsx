@@ -21,6 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
+    { to: "/courier", label: "Courier" },
     { to: "/about", label: "About Us" },
     { to: "/track", label: "Track" },
     { to: "/quote", label: "Quote" },
@@ -172,6 +173,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li className="text-primary-foreground/80">Customs Clearance</li>
                 <li className="text-primary-foreground/80">Import & Export</li>
                 <li className="text-primary-foreground/80">Warehousing</li>
+                <li>
+                  <Link to="/courier" className="hover:text-accent transition-colors">
+                    Courier Services
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -189,7 +195,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
           <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center">
             <p className="text-sm text-primary-foreground/70">
-              © 2025 BlueFlame Cargo Masters Ltd. All rights reserved.
+              © 2025 BlueFlame Cargo Master Ltd. All rights reserved.
             </p>
             <p className="text-xs text-primary-foreground/50 mt-2">
               Powered by Texcortech Systems
