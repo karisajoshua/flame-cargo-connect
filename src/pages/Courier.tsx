@@ -161,7 +161,7 @@ const Courier = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white bg-white/10 text-white hover:bg-white hover:text-primary"
               asChild
             >
               <Link to="/track">Track Shipment</Link>
