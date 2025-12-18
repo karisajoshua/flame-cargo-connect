@@ -44,7 +44,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Our Location",
-      content: "Nairobi, Kenya",
+      content: "Jomo Kenyatta International Airport, Nairobi, Kenya",
     },
     {
       icon: Phone,
@@ -171,30 +171,24 @@ const Contact = () => {
               </form>
             </Card>
 
-            {/* Map Placeholder */}
+            {/* Map */}
             <Card className="p-8">
               <h2 className="text-2xl font-bold mb-6">Our Location</h2>
-              <div className="bg-secondary/50 rounded-lg h-[400px] flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-accent mx-auto mb-4" />
-                  <p className="text-lg font-semibold mb-2">Nairobi, Kenya</p>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Google Maps integration will be added here
-                  </p>
-                  <Button
-                    variant="outline"
-                    asChild
-                  >
-                    <a
-                      href="https://www.google.com/maps/search/nairobi+kenya"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View on Google Maps
-                    </a>
-                  </Button>
-                </div>
+              <div className="rounded-lg overflow-hidden h-[400px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.683639695886!2d36.92139931475396!3d-1.3192319990301088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b7c9c3b2a6b6c!2sJomo%20Kenyatta%20International%20Airport!5e0!3m2!1sen!2ske!4v1702900000000!5m2!1sen!2ske"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="BlueFlame Cargo Master Location - Jomo Kenyatta International Airport"
+                ></iframe>
               </div>
+              <p className="text-sm text-muted-foreground mt-4 text-center">
+                Jomo Kenyatta International Airport, Nairobi, Kenya
+              </p>
             </Card>
           </div>
         </div>
