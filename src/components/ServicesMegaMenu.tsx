@@ -10,6 +10,7 @@ import projectCargoImage from "@/assets/service-project-cargo.jpg";
 
 interface ServicesMegaMenuProps {
   isScrolled: boolean;
+  isHomePage: boolean;
 }
 
 const services = [
@@ -57,7 +58,7 @@ const services = [
   },
 ];
 
-const ServicesMegaMenu = ({ isScrolled }: ServicesMegaMenuProps) => {
+const ServicesMegaMenu = ({ isScrolled, isHomePage }: ServicesMegaMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeService, setActiveService] = useState(services[0]);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -80,6 +81,8 @@ const ServicesMegaMenu = ({ isScrolled }: ServicesMegaMenuProps) => {
     };
   }, []);
 
+  const useWhiteText = isHomePage && !isScrolled;
+
   return (
     <div
       ref={menuRef}
@@ -89,9 +92,9 @@ const ServicesMegaMenu = ({ isScrolled }: ServicesMegaMenuProps) => {
     >
       <button
         className={`flex items-center gap-1 px-4 py-2 rounded-md font-medium transition-colors ${
-          isScrolled
-            ? "text-foreground hover:text-accent hover:bg-accent/5"
-            : "text-white hover:text-accent hover:bg-white/10"
+          useWhiteText
+            ? "text-white hover:text-accent hover:bg-white/10"
+            : "text-foreground hover:text-accent hover:bg-accent/5"
         }`}
       >
         Services
