@@ -57,14 +57,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 className={`px-4 py-2 rounded-md font-medium transition-colors ${
                   isActive("/")
                     ? "text-accent bg-accent/10"
-                    : isScrolled
-                      ? "text-foreground hover:text-accent hover:bg-accent/5"
-                      : "text-white hover:text-accent hover:bg-white/10"
+                    : (isHomePage && !isScrolled)
+                      ? "text-white hover:text-accent hover:bg-white/10"
+                      : "text-foreground hover:text-accent hover:bg-accent/5"
                 }`}
               >
                 Home
               </Link>
-              <ServicesMegaMenu isScrolled={isScrolled} />
+              <ServicesMegaMenu isScrolled={isScrolled} isHomePage={isHomePage} />
               {navLinks.filter(link => link.to !== "/").map((link) => (
                 <Link
                   key={link.to}
@@ -72,9 +72,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   className={`px-4 py-2 rounded-md font-medium transition-colors ${
                     isActive(link.to)
                       ? "text-accent bg-accent/10"
-                      : isScrolled
-                        ? "text-foreground hover:text-accent hover:bg-accent/5"
-                        : "text-white hover:text-accent hover:bg-white/10"
+                      : (isHomePage && !isScrolled)
+                        ? "text-white hover:text-accent hover:bg-white/10"
+                        : "text-foreground hover:text-accent hover:bg-accent/5"
                   }`}
                 >
                   {link.label}
@@ -93,13 +93,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`md:hidden p-2 rounded-md transition-colors ${
-                isScrolled ? "hover:bg-secondary" : "hover:bg-white/10"
+                (isHomePage && !isScrolled) ? "hover:bg-white/10" : "hover:bg-secondary"
               }`}
             >
               {mobileMenuOpen ? (
-                <X className={`h-6 w-6 ${isScrolled ? "" : "text-white"}`} />
+                <X className={`h-6 w-6 ${(isHomePage && !isScrolled) ? "text-white" : ""}`} />
               ) : (
-                <Menu className={`h-6 w-6 ${isScrolled ? "" : "text-white"}`} />
+                <Menu className={`h-6 w-6 ${(isHomePage && !isScrolled) ? "text-white" : ""}`} />
               )}
             </button>
           </div>
@@ -107,7 +107,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <div className={`md:hidden mt-4 pb-4 space-y-2 border-t pt-4 ${
-              isScrolled ? "bg-card" : "bg-primary/95 backdrop-blur-sm"
+              (isHomePage && !isScrolled) ? "bg-primary/95 backdrop-blur-sm" : "bg-card"
             }`}>
               {navLinks.map((link) => (
                 <Link
@@ -117,9 +117,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   className={`block px-4 py-3 rounded-md font-medium transition-colors ${
                     isActive(link.to)
                       ? "text-accent bg-accent/10"
-                      : isScrolled
-                        ? "text-foreground hover:bg-secondary"
-                        : "text-white hover:bg-white/10"
+                      : (isHomePage && !isScrolled)
+                        ? "text-white hover:bg-white/10"
+                        : "text-foreground hover:bg-secondary"
                   }`}
                 >
                   {link.label}
