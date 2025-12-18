@@ -49,7 +49,7 @@ const AirFreight = () => {
               <Button variant="hero" size="lg" asChild>
                 <Link to="/quote">Get a Quote</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Button variant="outline" size="lg" className="border-white bg-white/10 text-white hover:bg-white hover:text-primary" asChild>
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
