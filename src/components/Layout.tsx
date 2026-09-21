@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo.png";
@@ -137,6 +137,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Main Content */}
       <main className="flex-1">{children}</main>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/254773864687"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Blue Flame Cargo Master Int on WhatsApp"
+        title="Chat with us on WhatsApp"
+        className="fixed bottom-6 right-6 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+      >
+        <MessageCircle className="h-7 w-7" aria-hidden="true" />
+      </a>
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground mt-auto">
