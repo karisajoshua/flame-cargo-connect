@@ -183,7 +183,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="BlueFlame Cargo Master Location - Jomo Kenyatta International Airport"
+                  title="Blue Flame Cargo Master Int Cargo Master Location - Jomo Kenyatta International Airport"
                 ></iframe>
               </div>
               <p className="text-sm text-muted-foreground mt-4 text-center">
