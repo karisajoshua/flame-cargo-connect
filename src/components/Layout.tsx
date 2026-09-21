@@ -35,18 +35,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <header 
         className={`${isHomePage && !isScrolled ? 'absolute' : 'sticky'} top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? "bg-card border-b shadow-sm" 
+            ? "bg-card/95 backdrop-blur-xl border-b shadow-sm" 
             : "bg-transparent"
         }`}
       >
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
               <img 
                 src={logo} 
                 alt="Blue Flame Cargo Master Int Logo" 
-                className="h-10 w-auto group-hover:scale-105 transition-transform"
+                className="h-12 w-auto group-hover:scale-105 transition-transform"
               />
             </Link>
 
@@ -145,21 +145,21 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         rel="noopener noreferrer"
         aria-label="Chat with Blue Flame Cargo Master Int on WhatsApp"
         title="Chat with us on WhatsApp"
-        className="fixed bottom-6 right-6 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+        className="fixed bottom-6 right-6 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl ring-4 ring-white/80 transition-all hover:scale-110 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
       >
         <MessageCircle className="h-7 w-7" aria-hidden="true" />
       </a>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground mt-auto">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-[hsl(210_100%_12%)] text-primary-foreground mt-auto">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Company Info */}
             <div className="space-y-3">
               <img 
                 src={logo} 
                 alt="Blue Flame Cargo Master Int Logo" 
-                className="h-12 w-auto"
+                className="h-14 w-auto"
               />
               <p className="text-sm text-primary-foreground/80">
                 Global Reach. Local Expertise. Seamless Logistics.
