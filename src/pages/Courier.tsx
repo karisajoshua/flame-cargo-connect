@@ -178,7 +178,7 @@ const Courier = () => {
               Your Trusted Courier Partner
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              At Blue Flame Cargo Master Int Cargo Master, we understand that every delivery matters. Whether it's a critical business document, a special gift, or essential supplies, our courier services ensure your items reach their destination safely and on time. With years of experience in logistics, we've built a reputation for reliability, speed, and exceptional customer service.
+              At Blue Flame Cargo Master Int Master, we understand that every delivery matters. Whether it's a critical business document, a special gift, or essential supplies, our courier services ensure your items reach their destination safely and on time. With years of experience in logistics, we've built a reputation for reliability, speed, and exceptional customer service.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               <div className="text-center">
@@ -350,7 +350,7 @@ const Courier = () => {
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-muted-foreground">
-              <a href="tel:+254728268660" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="tel:+254773864687" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="h-5 w-5" />
                 +254 728 268 660
               </a>
