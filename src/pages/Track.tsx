@@ -57,10 +57,10 @@ const Track = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="relative overflow-hidden bg-[hsl(210_100%_12%)] text-primary-foreground py-24 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <Package className="h-16 w-16 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Track Your Cargo</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Track Your Cargo</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
             Enter your tracking number to see real-time updates on your shipment
           </p>
@@ -68,7 +68,7 @@ const Track = () => {
       </section>
 
       {/* Tracking Form */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <Card className="max-w-3xl mx-auto p-8">
             <form onSubmit={handleTrack} className="space-y-6">
@@ -202,7 +202,7 @@ const Track = () => {
       </section>
 
       {/* Help Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-24 bg-secondary/40">
         <div className="container mx-auto px-4">
           <Card className="max-w-3xl mx-auto p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Need Help?</h2>
