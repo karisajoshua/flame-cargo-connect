@@ -45,7 +45,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <Link to="/" className="flex items-center gap-2 group">
               <img 
                 src={logo} 
-                alt="BlueFlame Cargo Masters Logo" 
+                alt="Blue Flame Cargo Master Int Logo" 
                 className="h-10 w-auto group-hover:scale-105 transition-transform"
               />
             </Link>
@@ -146,7 +146,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="space-y-3">
               <img 
                 src={logo} 
-                alt="BlueFlame Cargo Masters Logo" 
+                alt="Blue Flame Cargo Master Int Logo" 
                 className="h-12 w-auto"
               />
               <p className="text-sm text-primary-foreground/80">
@@ -206,7 +206,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
           <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center">
             <p className="text-sm text-primary-foreground/70">
-              © 2025 BlueFlame Cargo Master Ltd. All rights reserved.
+              © 2025 Blue Flame Cargo Master Int Cargo Master Ltd. All rights reserved.
             </p>
             <p className="text-xs text-primary-foreground/50 mt-2">
               Powered by Texcortech Systems
