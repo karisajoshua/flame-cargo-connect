@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Globe, Truck, Clock, Shield, ArrowRight, Package, Plane, Ship } from "lucide-react";
+import { Globe, Truck, Clock, Shield, ArrowRight, Package, Plane, Ship, CheckCircle2, MapPin, Headphones, Sparkles } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -114,11 +114,15 @@ const Home = () => {
 
         {/* Content Overlay */}
         <div className="container relative z-10 mx-auto px-4 min-h-screen flex items-center">
-          <div className="max-w-3xl text-primary-foreground pt-20">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight min-h-[3.5em] md:min-h-[2.5em]">
+          <div className="max-w-4xl text-primary-foreground pt-20">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur-md mb-6 shadow-lg">
+              <Sparkles className="h-4 w-4 text-accent" />
+              Kenya-based logistics. Global capability.
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight min-h-[3.2em] md:min-h-[2.3em] drop-shadow-xl">
               <WavyText phrases={heroTaglines} interval={5000} />
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+            <p className="text-lg md:text-xl mb-8 text-primary-foreground/85 max-w-2xl leading-relaxed">
               Trusted by businesses across Kenya and worldwide for fast, reliable, and secure logistics solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -136,15 +140,39 @@ const Home = () => {
                 <Link to="/track">Track Your Cargo</Link>
               </Button>
             </div>
+            <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/85">
+              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Air, sea & road freight</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Customs expertise</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Cargo tracking</span>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 z-20 translate-y-1/2 hidden lg:block">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-3 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-2xl">
+              <Link to="/quote" className="group flex items-center gap-4 p-6 hover:bg-secondary/60 transition-colors">
+                <div className="rounded-xl bg-accent/10 p-3"><Package className="h-6 w-6 text-accent" /></div>
+                <div><p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Start here</p><p className="font-semibold group-hover:text-accent">Request a freight quote</p></div>
+              </Link>
+              <Link to="/track" className="group flex items-center gap-4 border-x border-border/60 p-6 hover:bg-secondary/60 transition-colors">
+                <div className="rounded-xl bg-primary/10 p-3"><MapPin className="h-6 w-6 text-primary" /></div>
+                <div><p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">In transit</p><p className="font-semibold group-hover:text-accent">Track your shipment</p></div>
+              </Link>
+              <Link to="/contact" className="group flex items-center gap-4 p-6 hover:bg-secondary/60 transition-colors">
+                <div className="rounded-xl bg-accent/10 p-3"><Headphones className="h-6 w-6 text-accent" /></div>
+                <div><p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Need help?</p><p className="font-semibold group-hover:text-accent">Talk to our logistics team</p></div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-background">
+      <section className="pt-28 pb-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Blue Flame Cargo Master Int?</h2>
+          <div className="text-center mb-14"
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent mb-3">Why Blue Flame</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Logistics built around your business</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We combine global reach with personalized service to deliver exceptional logistics solutions
             </p>
@@ -155,10 +183,10 @@ const Home = () => {
               return (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-lg transition-shadow border-2 hover:border-accent"
+                  className="group p-7 border border-border/70 bg-card/80 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:border-accent/40 transition-all duration-300"
                 >
-                  <div className="bg-accent/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="h-7 w-7 text-accent" />
+                  <div className="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <Icon className="h-7 w-7 text-accent group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
@@ -170,11 +198,12 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent mb-3">What we move</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Freight solutions without the friction</h2>
+            <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
               Comprehensive logistics solutions tailored to your business needs
             </p>
           </div>
@@ -182,12 +211,12 @@ const Home = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card key={index} className="p-8 text-center hover:shadow-xl transition-all">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="h-8 w-8 text-primary" />
+                <Card key={index} className="group p-8 text-left bg-white/5 border-white/10 text-primary-foreground backdrop-blur-sm hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+                  <div className="bg-accent/15 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                    <Icon className="h-7 w-7 text-accent" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <p className="text-primary-foreground/65">{service.description}</p>
                 </Card>
               );
             })}
