@@ -24,12 +24,12 @@ const SeaFreight = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+      <section className="relative h-[68vh] min-h-[520px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${seaFreightImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210_100%_10%)]/95 via-primary/85 to-primary/45" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
@@ -39,7 +39,7 @@ const SeaFreight = () => {
               </div>
               <span className="text-accent font-semibold">Freight Services</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.03]">
               Sea Freight Forwarding
             </h1>
             <p className="text-xl text-white/90 mb-8">
@@ -65,12 +65,12 @@ const SeaFreight = () => {
               Reliable Ocean Freight Services
             </h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Sea freight remains the most cost-effective way to move large volumes of cargo internationally. At BlueFlame Cargo Master, we leverage our strong relationships with major shipping lines to offer competitive rates and reliable service on all major trade routes.
+              Sea freight remains the most cost-effective way to move large volumes of cargo internationally. At Blue Flame Cargo Master Int, we leverage our strong relationships with major shipping lines to offer competitive rates and reliable service on all major trade routes.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
-              <Card key={feature.title} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <Card key={feature.title} className="text-center p-6 rounded-2xl border-border/70 shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                 <CardContent className="pt-4">
                   <div className="mx-auto w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                     <feature.icon className="h-7 w-7 text-accent" />
@@ -104,7 +104,7 @@ const SeaFreight = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-card rounded-xl p-8 border">
+            <div className="bg-card rounded-2xl p-8 md:p-10 border border-border/70 shadow-xl">
               <h3 className="text-2xl font-bold mb-6 text-foreground">Our Sea Freight Process</h3>
               <div className="space-y-6">
                 {["Booking & Documentation", "Cargo Collection", "Port Handling", "Ocean Transit", "Destination Port", "Final Delivery"].map((step, index) => (
