@@ -218,7 +218,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
           <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center">
             <p className="text-sm text-primary-foreground/70">
-              © 2025 Blue Flame Cargo Master Int Cargo Master Ltd. All rights reserved.
+              © 2026 Blue Flame Cargo Master Int. All rights reserved.
             </p>
             <p className="text-xs text-primary-foreground/50 mt-2">
               Powered by Texcortech Systems
