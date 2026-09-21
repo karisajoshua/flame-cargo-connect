@@ -70,9 +70,9 @@ const Services = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="relative overflow-hidden bg-[hsl(210_100%_12%)] text-primary-foreground py-24 md:py-28">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Our Services</h1>
           <p className="text-xl max-w-3xl mx-auto text-primary-foreground/90">
             Comprehensive logistics solutions tailored to meet your unique business requirements
           </p>
@@ -80,7 +80,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
             {services.map((service, index) => {
@@ -94,7 +94,7 @@ const Services = () => {
                   }`}
                 >
                   <div className={isEven ? "" : "lg:col-start-2"}>
-                    <Card className="p-8 h-full">
+                    <Card className="p-8 md:p-10 h-full rounded-2xl border-border/70 shadow-sm hover:shadow-xl transition-shadow">
                       <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                         <Icon className="h-8 w-8 text-accent" />
                       </div>
@@ -122,7 +122,7 @@ const Services = () => {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                      className="rounded-2xl shadow-2xl w-full h-[420px] object-cover"
                     />
                   </div>
                 </div>
@@ -133,24 +133,24 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-24 bg-secondary/40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Additional Services</h2>
             <p className="text-lg text-muted-foreground">We go beyond basic logistics</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="p-6 text-center">
+            <Card className="p-7 text-center rounded-2xl border-border/70 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all">
               <Package className="h-12 w-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Cargo Insurance</h3>
               <p className="text-muted-foreground">Comprehensive coverage for your valuable shipments</p>
             </Card>
-            <Card className="p-6 text-center">
+            <Card className="p-7 text-center rounded-2xl border-border/70 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all">
               <Truck className="h-12 w-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Ground Transportation</h3>
               <p className="text-muted-foreground">Reliable trucking services across East Africa</p>
             </Card>
-            <Card className="p-6 text-center">
+            <Card className="p-7 text-center rounded-2xl border-border/70 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all">
               <Globe className="h-12 w-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Supply Chain Consulting</h3>
               <p className="text-muted-foreground">Expert advice to optimize your logistics operations</p>
@@ -160,7 +160,7 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-24 bg-[hsl(210_100%_12%)] text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
