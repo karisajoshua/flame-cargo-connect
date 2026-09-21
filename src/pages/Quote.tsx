@@ -49,7 +49,7 @@ const Quote = () => {
 
     // Format message for WhatsApp
     const reference = `BFC-${Date.now().toString().slice(-6)}`;
-    const whatsappMessage = `🚚 *Quote Request from Blue Flame Cargo Master Int Cargo*
+    const whatsappMessage = `🚚 *Quote Request from Blue Flame Cargo Master Int*
 
 📋 *Contact Details:*
 Name: ${formData.fullName}
@@ -68,7 +68,7 @@ Reference: ${reference}`;
 
     // Encode message for WhatsApp URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/254728268660?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/254773864687?text=${encodedMessage}`;
 
     // Navigate to WhatsApp (avoids popup blocker)
     window.location.href = whatsappURL;
@@ -108,7 +108,7 @@ Reference: ${reference}`;
                 variant="cta" 
                 onClick={() => {
                   const encodedMessage = encodeURIComponent(`Following up on quote reference: BFC-${Date.now().toString().slice(-6)}`);
-                  window.open(`https://wa.me/254728268660?text=${encodedMessage}`, '_blank');
+                  window.open(`https://wa.me/254773864687?text=${encodedMessage}`, '_blank');
                 }}
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
@@ -127,10 +127,10 @@ Reference: ${reference}`;
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="relative overflow-hidden bg-[hsl(210_100%_12%)] text-primary-foreground py-24 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <FileText className="h-16 w-16 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Request a Quote</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Request a Quote</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
             Let's help you move your cargo. Fill out the form and get a custom quote within 24 hours.
           </p>
@@ -138,7 +138,7 @@ Reference: ${reference}`;
       </section>
 
       {/* Form Section */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <Card className="max-w-3xl mx-auto p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
