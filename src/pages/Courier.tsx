@@ -178,7 +178,7 @@ const Courier = () => {
               Your Trusted Courier Partner
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              At BlueFlame Cargo Master, we understand that every delivery matters. Whether it's a critical business document, a special gift, or essential supplies, our courier services ensure your items reach their destination safely and on time. With years of experience in logistics, we've built a reputation for reliability, speed, and exceptional customer service.
+              At Blue Flame Cargo Master Int Cargo Master, we understand that every delivery matters. Whether it's a critical business document, a special gift, or essential supplies, our courier services ensure your items reach their destination safely and on time. With years of experience in logistics, we've built a reputation for reliability, speed, and exceptional customer service.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               <div className="text-center">
