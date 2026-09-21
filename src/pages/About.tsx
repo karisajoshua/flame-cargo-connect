@@ -6,9 +6,9 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="relative overflow-hidden bg-[hsl(210_100%_12%)] text-primary-foreground py-24 md:py-28">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Blue Flame Cargo Master Int</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">About Blue Flame Cargo Master Int</h1>
           <p className="text-xl max-w-3xl mx-auto text-primary-foreground/90">
             Your trusted logistics partner for seamless global freight solutions
           </p>
@@ -16,7 +16,7 @@ const About = () => {
       </section>
 
       {/* Company Story */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Our Story</h2>
@@ -41,7 +41,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-24 bg-secondary/40">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-8">
@@ -69,7 +69,7 @@ const About = () => {
       </section>
 
       {/* Global Coverage */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Globe className="h-16 w-16 text-accent mx-auto mb-4" />
@@ -103,7 +103,7 @@ const About = () => {
       </section>
 
       {/* Why Work With Us */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-24 bg-[hsl(210_100%_12%)] text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Users className="h-16 w-16 mx-auto mb-6" />
